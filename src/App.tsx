@@ -5,7 +5,7 @@ import teste from './analisador/analisadorLexico';
 
 function App() {
 
-	teste();
+  teste();
 
   return (
     <div className="App">
