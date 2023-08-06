@@ -20,7 +20,7 @@ export default function teste() {
         'q12': { 'a': 'q1', 'b': 'q1', 'c': 'q1', 'd': 'q1', 'e': 'q1', 'f': 'q1', 'g': 'q1', 'h': 'q1', 'i': 'q1', 'j': 'q1', 'k': 'q1', 'l': 'q1', 'm': 'q1', 'n': 'q1', 'o': 'q1', 'p': 'q1', 'q': 'q1', 'r': 'q1', 's': 'q1', 't': 'q1', 'u': 'q1', 'v': 'q1', 'w': 'q1', 'x': 'q1', 'y': 'q1', 'z': 'q1', '0': 'q1', '1': 'q1', '2': 'q1', '3': 'q1', '4': 'q1', '5': 'q1', '6': 'q1', '7': 'q1', '8': 'q1', '9': 'q1' },
     };
 
-    const Q: string[] = ['q0':'aaaaa', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12'];
+    const Q: Record<string, string> = {'q0':'aaaaa', 'q1':'aaaaa', 'q2':'aaaaa', 'q3':'aaaaa', 'q4':'aaaaa', 'q5':'aaaaa', 'q6':'aaaaa', 'q7':'aaaaa', 'q8':'aaaaa', 'q9':'aaaaa', 'q10':'aaaaa', 'q11':'aaaaa', 'q12':'aaaaa'};
     const q0: string = 'q0';
     const finais: string[] = ['q1', 'q3', 'q4', 'q9', 'q12'];
 
