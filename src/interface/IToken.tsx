@@ -1,4 +1,4 @@
-export interface IToken {
+export default interface IToken {
     Token: string
     Lexema: String
     Linha: String

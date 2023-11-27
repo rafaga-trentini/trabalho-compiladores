@@ -1,30 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import teste from './analisador/analisadorLexico';
+import React, { useEffect, useState } from 'react';
+import analisadorLexico from './analisador/analisadorLexico';
+import IToken from './interface/IToken';
 
-function App() {
+const App: React.FC = () => {
+  const [textoEntrada, setTextoEntrada] = useState('');
+  const [tokens, setTokens] = useState<IToken[]>([]);
 
-  teste();
+  const handleAnalisar = () => {
+    // Chama o analisador léxico passando o texto de entrada
+    setTokens(analisadorLexico(textoEntrada));
+
+  };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <textarea
+        value={textoEntrada}
+        onChange={(e) => setTextoEntrada(e.target.value)}
+        placeholder="Digite o texto aqui"
+      />
+      <button onClick={handleAnalisar}>Analisar</button>
+
+      {/* Exibe a listagem de tokens */}
+      <div>
+        <h2>Listagem de Tokens:</h2>
+        <ul>
+          {tokens.map((token, index) => (
+            <li key={index}>
+              Token: {token.Token}, Lexema: {token.Lexema}, Linha: {token.Linha}, PosInicial: {token.PosInicial}, PosFinal: {token.PosFinal}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
