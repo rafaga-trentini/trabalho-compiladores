@@ -69,6 +69,7 @@ export default function analisadorLexico(entrada: string) {
         'q33': 'READ', 'q34': 'ABRE_PARENTESES', 'q35': 'FECHA_PARENTESES', 'q36': 'ABRE_COCHETES', 'q37': 'FECHA_COCHETES', 'q38': 'ABRE_CHAVES', 'q39': 'FECHA_CHAVES',
         'q40': 'MAIS', 'q41': 'INCREMENTO', 'q42': 'MENOS', 'q43': 'DECREMENTO', 'q44': 'MULTIPLICACAO', 'q45': 'DIVISAO', 'q46': 'PORCENTAGEM', 'q47': 'MENOR_QUE', 'q48': 'MENOR_IGUAL_QUE',
         'q49': 'MAIOR_QUE', 'q50': 'MAIOR_IGUAL_QUE', 'q52': 'DIFERENTE', 'q53': 'POTENCIA', 'q54': 'ESPACO',
+
     };
     const q0: string = 'q0';
     const finais: string[] = ['q1', 'q3', 'q4', 'q9', 'q12'];
@@ -114,6 +115,7 @@ export default function analisadorLexico(entrada: string) {
                 PosFinal: i.toString(),
             }
             listaToken.push(token);
+            
             posInicial = i--;
 
             token = tokenVazio;
