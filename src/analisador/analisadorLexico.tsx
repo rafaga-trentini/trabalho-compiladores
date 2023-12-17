@@ -72,7 +72,7 @@ export default function analisadorLexico(entrada: string) {
 
     };
     const q0: string = 'q0';
-    const finais: string[] = ['q1', 'q3', 'q4', 'q9', 'q12'];
+    const finais: string[] = ['q1', 'q3', 'q4', 'q9', 'q12', 'q16', 'q22', 'q24', 'q29', 'q33', 'q34', 'q35', 'q36', 'q37', 'q38', 'q39', 'q40', 'q41', 'q42', 'q43', 'q44', 'q45', 'q46', 'q47', 'q48','q49', 'q50', 'q52', 'q53', 'q54'];
 
     let listaToken: IToken[] = [];
 
